@@ -1,7 +1,7 @@
 import 'firebase/firestore';
 import firebase from 'firebase/compat/app';
 const app = firebase.initializeApp({
-	apiKey: process.env.REACT_APP_firebase_key,
+	apiKey: process.env.REACT_APP_APIKEY,
 	authDomain: process.env.REACT_APP_authDomain,
 	projectId: process.env.REACT_APP_projectId,
 	storageBucket: process.env.REACT_APP_storageBucket,

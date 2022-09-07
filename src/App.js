@@ -22,24 +22,20 @@ const App = () => {
 				spinner.style.display = 'none';
 				setLoader(false);
 				navigate('/start');
-			}, 200000000);
+			}, 3000);
 		}
 	}, []);
 	return (
 		<>
-			{!loader ? (
+			{!loader && (
 				<MainContext>
 					<AuthContext>
 						<Layout>
 							<Routes>
 								<Route
+									exact
 									path="/start"
-									element={
-										<PrivateRoutes>
-											{' '}
-											<LandingPage />
-										</PrivateRoutes>
-									}
+									element={<LandingPage />}
 								/>
 								<Route
 									exact
@@ -87,8 +83,6 @@ const App = () => {
 						</Layout>
 					</AuthContext>
 				</MainContext>
-			) : (
-				''
 			)}
 		</>
 	);
